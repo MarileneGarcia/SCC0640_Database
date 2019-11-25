@@ -1,13 +1,15 @@
 # Parte 3 Projeto de BD
 
-**Leandro Antonio Silva, 9805341**
+**Leandro Antonio Silva, 9805341 **
+
 **Maria Luisa do Nascimento da Silva, 10310721**
+
 **Marilene Andrade Garcia, 10276974**
 
 Todos os integrantes do grupo utilizaram o sitema operacional Ubuntu 18.04
 
 Para instalação do PostreSQL e criaçaõ do banco de dados foi seguido o tutorial:
-<a href="http://pythonclub.com.br/tutorial-postgresql.html">
+<a href="http://pythonclub.com.br/tutorial-postgresql.html"><\a>
 
 Para rodar o arquivo main.py foi necessário instalar as seguintes bibliotecas:
 
