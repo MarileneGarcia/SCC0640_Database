@@ -1,10 +1,8 @@
 # Parte 3 Projeto de BD 
 
-**Leandro Antonio Silva, 9805341**
-
-**Maria Luisa do Nascimento da Silva, 10310721**
-
-**Marilene Andrade Garcia, 10276974**
+**Leandro Antonio Silva, 9805341**  
+**Maria Luisa do Nascimento da Silva, 10310721**  
+**Marilene Andrade Garcia, 10276974**  
 
 Todos os integrantes do grupo utilizaram o sitema operacional Ubuntu 18.04
 
