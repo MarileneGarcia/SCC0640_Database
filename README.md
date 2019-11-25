@@ -13,11 +13,9 @@ http://pythonclub.com.br/tutorial-postgresql.html
 
 Para rodar o arquivo main.py foi necessário instalar as seguintes bibliotecas:
 
-psycopg2 - sudo apt install libpq-dev python3-dev 
-
-termcolor - pip3 install termcolor
-
-apt-get install python3-tk
+psycopg2 - sudo apt install libpq-dev python3-dev  
+termcolor - pip3 install termcolor  
+apt-get install python3-tk  
 
 Para criação das tabelas e inserção das tuplas no banco de dados, rodar o programar main.py (para isso, or arquivos .sql precisam estar na mesma pasta do main.py).
 Ao executar a main, a interface também será gerada.
