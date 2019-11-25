@@ -9,7 +9,7 @@
 Todos os integrantes do grupo utilizaram o sitema operacional Ubuntu 18.04
 
 Para instalação do PostreSQL e criaçaõ do banco de dados foi seguido o tutorial:
-<a href="http://pythonclub.com.br/tutorial-postgresql.html">pythonclub<\a>
+http://pythonclub.com.br/tutorial-postgresql.html
 
 Para rodar o arquivo main.py foi necessário instalar as seguintes bibliotecas:
 
