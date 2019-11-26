@@ -4,12 +4,13 @@ from termcolor import colored
 from configparser import ConfigParser
 import sys
 import interface
+from tkinter import *
 
-conn = None
-cur = None
+connection = None
+cursor = None
 
 def run_sql(filename):
-	global conn, cur
+	global connection, cursor
 
 	file = open(filename, 'r')
 	sql = file.read()
@@ -24,7 +25,7 @@ def run_sql(filename):
 		if (len(command)>0):
 			command = command + ';'
 			try:
-				cur.execute(command)
+				cursor.execute(command)
 			except(Exception, psycopg2.DatabaseError) as error:
 				text = colored('ERRO', 'yellow', attrs=['reverse', 'blink'])
 				print('\n' + text + command)
@@ -46,8 +47,8 @@ def config(filename='database.ini', section='postgresql'):
     return db
 
 def insert(table, values):
-    global conn
-    global cur
+    global connection
+    global curso
 
     print("Executando INSERT...")
     
@@ -64,7 +65,7 @@ def insert(table, values):
     print("\n" + text + " " + query)
 
     try:
-        cur.execute(query)
+        cursor.execute(query)
         result = 1
 
     except Exception as error:
@@ -77,21 +78,21 @@ def insert(table, values):
 
 
 def connect():
-	global conn, cur
+	global connection, cursor
 
 	try:
 		params = config()
  
 		print('Connecting to the PostgreSQL database...')
-		conn = psycopg2.connect(**params)
-		conn.autocommit = True
+		connection = psycopg2.connect(**params)
+		connection.autocommit = True
       
-		cur = conn.cur()
+		cursor = connection.cursor()
         
 		print('PostgreSQL database version:')
-		cur.execute('SELECT version()')
+		cursor.execute('SELECT version()')
  
-		db_version = cur.fetchone()
+		db_version = cursor.fetchone()
 		print(db_version)
 
 		print('Conectado com sucesso!')
@@ -103,7 +104,7 @@ def connect():
 
 
 def main():
-	global conn, cur
+	global connection, cursor
 
 	connect()
 
@@ -111,7 +112,14 @@ def main():
 	run_sql('create_tables.sql')
 	run_sql('insert.sql')
 
-	cur.close()
+	# ==== Conexão interface ======== 
+	root = Tk()
+	interface.atribuir(cursor,connection)
+	interface.Application(root)
+	root.mainloop()
+	# ===============================
+
+	cursor.close()
 	 
  
 if __name__ == '__main__':
