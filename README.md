@@ -4,7 +4,7 @@ Members:
 
 **Leandro Antonio Silva, https://github.com/leandroS08**  
 **Maria Luisa do Nascimento da Silva, https://github.com/MariaLuisaNascimento**  
-**Marilene Andrade Garcia**  
+**Marilene Andrade Garcia, https://github.com/MarileneGarcia**  
 
 Operacional System: Ubuntu 18.04
 
